@@ -1,13 +1,12 @@
 """Health check endpoint for application monitoring."""
 
 import json
-import time
 import platform
-from typing import Optional
+import time
 
 # Module-level state
 _start_time = time.time()
-_db_connected: Optional[bool] = None
+_db_connected: bool | None = None
 
 
 def set_db_connected(status: bool) -> None:
